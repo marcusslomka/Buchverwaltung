@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
             public static void main(String[] args) throws Exception {
-                Library library = new Library();
+               Libary library = new Libary();
 
                 // Autoren erstellen
                 Author author1 = new Author("J.K. Rowling", 1965);

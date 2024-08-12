@@ -3,7 +3,6 @@ package org.example;
 import java.util.*;
 
 public class Libary {
-    class Library {
         private List<Book> books = new ArrayList<>();
         private List<Loan> loans = new ArrayList<>();
 
@@ -49,4 +48,3 @@ public class Libary {
         public String getMostPopularAuthorByBorrowedBooksCount() {}
 
     }
-}
