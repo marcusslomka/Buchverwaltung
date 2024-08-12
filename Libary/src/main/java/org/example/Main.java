@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
             public static void main(String[] args) throws Exception {
-               Libary library = new Libary();
+               Library library = new Library();
 
                 // Autoren erstellen
                 Author author1 = new Author("J.K. Rowling", 1965);
@@ -47,8 +47,6 @@ public class Main {
                 library.loanBook(book7, dateFormatter.parse("10.10.2023"), dateFormatter.parse("25.10.2023"));
                 library.loanBook(book8, dateFormatter.parse("01.11.2023"), dateFormatter.parse("15.11.2023"));
                 library.loanBook(book3, dateFormatter.parse("20.11.2023"), dateFormatter.parse("05.12.2023"));
+
             }
         }
-
-    }
-}
