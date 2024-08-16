@@ -1,0 +1,52 @@
+Drop Table if Exists BOOKS;
+
+
+
+CREATE TABLE BOOKS (
+    ID INT  PRIMARY KEY,
+    NAME VARCHAR(50),
+    PUBLISHED_YEAR INT,
+    PAGES INT
+    );
+    INSERT INTO BOOKS VALUES(1,"Harry Potter and the Philosopher's Stone",1997, 223);
+    INSERT INTO BOOKS VALUES(2,"A Game of Thrones)",1996, 835);
+    INSERT INTO BOOKS VALUES(3,"The Lord of the Rings", 1954, 1200);
+    INSERT INTO BOOKS VALUES(4,"Murder on the Orient Express", 1934, 256);
+    INSERT INTO BOOKS VALUES(5,"The Shining", 1977, 447);
+    INSERT INTO BOOKS VALUES(6,"Harry Potter and the Chamber of Secrets", 1998, 251);
+    INSERT INTO BOOKS VALUES(7"The Hobbit", 1937, 310);
+    INSERT INTO BOOKS VALUES(8,"The Winds of Winter", 2024, 900);
+
+    Drop Table if Exists DIRECTORS;
+    Drop Table if Exists MOVIES;
+
+    CREATE TABLE DIRECTORS(
+        ID INT PRIMARY KEY,
+        FIRSTNAME VARCHAR(20),
+        LASTNAME VARCHAR(20),
+        );
+
+    INSERT INTO DIRECTORS VALUES (1,'Peter', 'Jackson');
+    INSERT INTO DIRECTORS VALUES (2,'Chris', 'Columbus');
+    INSERT INTO DIRECTORS VALUES (3,'James', 'Cameron');
+    INSERT INTO DIRECTORS VALUES (4,'Christopher', 'Nolan');
+
+    CREATE TABLE MOVIES(
+        ID INT PRIMARY KEY,
+        TITEL VARCHAR,
+        GENRE VARCHAR,
+        RELEASEYEAR INT,
+        DIRECTOR_ID INT,
+        FOREIGN KEY (DIRECTOR_ID) REFERENCES DIRECTORS(ID)
+        );
+
+    INSERT INTO MOVIES VALUES (1,'Herr Der Ringe','Fantasie',2001,1);
+    INSERT INTO MOVIES VALUES (2,'Harry Potter','Fantasie',2001,2);
+    INSERT INTO MOVIES VALUES (3,'Avatar','Fantasie',2009,3);
+    INSERT INTO MOVIES VALUES (4,'Interstellar','Science Fiction',2014,4);
+
+    SELECT * FROM MOVIES;
+    SELECT * FROM MOVIES WHERE GENRE = 'Fantasie';
+    SELECT * FROM MOVIES WHERE RELEASEYEAR <2008;
+    SELECT * FROM Directors;
+

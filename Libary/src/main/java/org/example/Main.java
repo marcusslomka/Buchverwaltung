@@ -48,5 +48,10 @@ public class Main {
                 library.loanBook(book8, dateFormatter.parse("01.11.2023"), dateFormatter.parse("15.11.2023"));
                 library.loanBook(book3, dateFormatter.parse("20.11.2023"), dateFormatter.parse("05.12.2023"));
 
+             //System.out.println(library.getBooksSortedByPublicationYear());
+             //System.out.println(library.getAuthorsSortedByBirthYear());
+             //System.out.println(library.filterBooksByPageCount(100, 300));
+             System.out.println(library.getAuthorsSortedByBirthYear());
             }
+
         }
