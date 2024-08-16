@@ -1,7 +1,8 @@
 package org.example;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
+import java.util.AbstractMap;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
@@ -41,7 +42,11 @@ public class Library {
 
     // 4. Übung
     public Map<Author, List<Book>> groupBooksByAuthor() {
-
+        return books
+                .stream()
+                .flatMap(book -> book.getAuthors().stream().map(
+                        author -> author. new AbstractMap.SimpleEntry<>(author,book))
+                .collect(Collectors.groupingBy(Map.Entry::getKey,Collectors.mapping(book ->book, Collectors.toList())));
     }
 
     // 5. Übung
